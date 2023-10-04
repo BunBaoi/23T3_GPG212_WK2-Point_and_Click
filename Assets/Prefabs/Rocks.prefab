@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4193741666282614283}
   - component: {fileID: 3912842425477029042}
   m_Layer: 0
-  m_Name: Blue
+  m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3591475252166238997}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07165815, y: -0.29094738, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,3 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6799fa329f6c82844b2d57be5d7466d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
+  health: 10
+  alive: 1
+  HealthText: {fileID: 0}
+  block: {fileID: 3591475252166238997}
