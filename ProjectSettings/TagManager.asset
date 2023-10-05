@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stone
+  - Water
+  - Lava
+  - Pickaxe
+  - WaterBucket
+  - LavaBucket
   layers:
   - Default
   - TransparentFX

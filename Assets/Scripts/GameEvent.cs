@@ -2,62 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameEvent : MonoBehaviour
 {
 
+    public float damage = 1;
+    public float balance;
 
-    public Rock RockStatus;
-    public int count;
-    public GameObject PrefabSpwan;
-    public int counter;
+    public GameObject[] itemsToEquip; // Drag and drop the items you want to equip here in the Inspector.
 
-    [Header("UI")]
-    public TextMeshProUGUI HealthText;
-    public TMP_Text Score;
-    public TMP_Text PlayerScore;
+    private GameObject equippedItem;
+    private Button currentButton;
 
+    public Rock rock;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(PrefabSpwan, new Vector3(0,0,0), Quaternion.identity);
-
-        RockStatus = GameObject.Find("Rocks").GetComponent<Rock>();
-
-        //count = RockStatus.health;
-
-
-        Debug.Log(count);
+        Debug.Log("SPAWNED");
+        equippedItem = itemsToEquip[0];
+        Debug.Log(equippedItem);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void EquipItem(Button button)
     {
-        count = RockStatus.health;
-        HealthUI();
-
-        //Debug.Log("Counter " + counter);
-        //counter = counter += 1;
-
-
-
-
-        if (RockStatus.alive == false)
+        if (currentButton != null)
         {
-            Debug.Log("This call works");
-            RockStatus.alive = true;
+            // If there's a currently equipped item and a new button is clicked,
+            // unequip the current item and deactivate it.
+            UnequipItem();
+
         }
-        else
-        {
 
+        // Find the index of the clicked button.
+        int itemIndex = System.Array.IndexOf(itemsToEquip, button.gameObject);
+        Debug.Log(equippedItem);
+
+        // Check if the item index is valid.
+        if (itemIndex >= 0 && itemIndex < itemsToEquip.Length)
+        {
+            equippedItem = itemsToEquip[itemIndex];
+            equippedItem.SetActive(true);
+            currentButton = button;
         }
     }
 
-    void HealthUI()
+    public void UnequipItem()
     {
-        HealthText.text = $"Health: {count}";
-       
+        if (equippedItem != null)
+        {
+            equippedItem.SetActive(false);
+            equippedItem = null;
+            // Reset the currentButton reference to null.
+            currentButton = null;
+        }
+    }
+    public void PickUpgrade()
+    {
+        if (rock.balance >= 2)
+        {
+            rock.balance = rock.balance - 2;
+            Debug.Log("New Balance" + rock.balance);
+            damage++;
+            Debug.Log("Damage " + damage);
+
+        }
+
     }
 }
