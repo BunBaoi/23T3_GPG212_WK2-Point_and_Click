@@ -27,6 +27,11 @@ public class GameEvent : MonoBehaviour
     }
 
 
+    public void EquipItem(string itemequpit)
+    {
+        Debug.Log("equippedItem" + itemequpit);
+    }
+
     public void EquipItem(Button button)
     {
         if (currentButton != null)

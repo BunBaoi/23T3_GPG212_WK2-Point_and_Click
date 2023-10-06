@@ -1433,7 +1433,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1217817259}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248630007}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: EquipItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Pickaxe
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1217817259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1642,7 +1654,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386845770}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248630007}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: EquipItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: water
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1386845770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,7 +1787,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528736620}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1248630007}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: EquipItem
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: lava
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1528736620
 MonoBehaviour:
   m_ObjectHideFlags: 0
